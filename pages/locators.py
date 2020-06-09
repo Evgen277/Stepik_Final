@@ -10,4 +10,8 @@ class ProductPageLocators():
     PRODUCT_NAME_AT_BASKET = (By.CSS_SELECTOR, 'div.alert:nth-child(1) > div:nth-child(2) > strong:nth-child(1)')
     BASKET_PRICE = (By.CSS_SELECTOR, 'div#messages>:nth-child(3) > div.alertinner > p:nth-child(1)' )
 
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     
