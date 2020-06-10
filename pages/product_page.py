@@ -5,6 +5,7 @@ from .locators import ProductPageLocators
 import time
 
 class ProductPage(BasePage):
+        
     def should_add_product_to_basket(self):
         add_product = self.browser.find_element(*ProductPageLocators.ADD_PRODUCT)
         add_product.click()
@@ -33,4 +34,11 @@ class ProductPage(BasePage):
         basket_price_message = self.browser.find_element(*ProductPageLocators.BASKET_PRICE)
         f = basket_price_message.text
         assert self.is_element_present(*ProductPageLocators.BASKET_PRICE), "Wrong basket price message"
+        
+    def should_not_be_success_message(self):
+        added_message = self.browser.find_element(*ProductPageLocators.PRODUCT_ADDED_TO_BASKET)
+        p = added_message.text
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_ADDED_TO_BASKET), \
+       "Success message is presented, but should not be"
+
         
