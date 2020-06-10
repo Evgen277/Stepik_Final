@@ -26,9 +26,7 @@ class BasePage():
         link = self.browser.find_element(*BasePageLocators.BASKET)
         link.click()
         time.sleep(5)
-        a = self.browser.find_element(*BasePageLocators.BASKET_MESSAGE)
-        assert not self.is_element_present(*BasePageLocators.BASKET_ITEMS), "Items list should not be on the empty basket screen"
-        assert self.is_element_present(*BasePageLocators.BASKET_MESSAGE), "No empty basket message"
+        
 
     def is_element_present(self, how, what):
         try:
