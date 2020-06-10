@@ -17,4 +17,9 @@ class BasePageLocators():
     BASKET = (By.CSS_SELECTOR, 'span.btn-group>:nth-child(1)')
     BASKET_ITEMS = (By.CSS_SELECTOR, '.basket-items')
     BASKET_MESSAGE = (By.CSS_SELECTOR, 'div#content_inner>:nth-child(1)')
+    REGISTER_EMAIL = (By.CSS_SELECTOR, '[name = "registration-email"]')
+    REGISTER_PASSWORD = (By.CSS_SELECTOR, '[name = "registration-password1"]')
+    REGISTER_CONFIRM_PASSWORD = (By.CSS_SELECTOR, '[name = "registration-password2"]' )
+    REGISTER_BUTTON = (By.CSS_SELECTOR, '[name = "registration_submit"]')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
     
